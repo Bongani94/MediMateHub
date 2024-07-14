@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+*{
+  font-family: "Rubik", sans-serif;
+}
+
+/* antd override */
+input{
+  border-radius: 4px !important;
+  height: 40px !important;
+  border: 2px solid gray !important;
+}
+
+label{
+  font-size: 16px !important;
+  color: black;
+}
+
+.ant-form-item{
+  margin: 0 10px !important;
+}
+
+/* Common styling */
+.card-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.normal-text{
+  font-size: 1rem;
+}
+
+.card{
+  box-shadow: 0 0 2px gainsboro;
+}
+
+.primary-button{
+  background-color: rgb(51, 71, 253);
+  border-color: rgb(51, 71, 253);
+  height: 40px !important;
+  width: 100% !important;
+  color: white !important;
+  font-size: 16px !important;
+}
+
+.primary-button:hover{
+  background-color: rgb(96, 112, 249);
+  border-color: rgb(75, 92, 246);
+  height: 40px !important;
+  width: 100% !important;
+  color: rgb(112, 112, 112) !important;
+  font-size: 16px !important;
+}
+
+.anchor{
+  color: rgb(26, 58, 217) !important;
+  font-size: 14px !important;
+  text-decoration: underline !important;
+}
+
+.anchor:hover{
+  color: rgb(134, 152, 239) !important;
+  font-size: 16px !important;
+  text-decoration: none !important;
+}
+
+/* authentication pages*/
+.authentication{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authentication-form{
+  width: 400px;
+}
