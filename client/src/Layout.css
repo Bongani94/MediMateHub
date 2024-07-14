@@ -1,0 +1,25 @@
+.main{
+    padding: 20px;
+}
+
+.sidebar{
+    background-color: green;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black;
+    margin-right: 20px;
+}
+
+.header{
+    background-color: aqua;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black;
+    margin-bottom: 20px;
+    height: 15vh;
+}
+
+.body{
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 0 2px black;
+    height: 85vh;
+}
