@@ -71,6 +71,11 @@
     padding-left: 10px;
   }
 
+.logo{
+    color: rgb(133, 243, 133);
+    font-weight: bold;
+}
+
 @media screen and (max-width: 768px){
 
     .menu{
