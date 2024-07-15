@@ -7,6 +7,13 @@
     border-radius: 5px;
     box-shadow: 0 0 2px black;
     margin-right: 20px;
+    min-height: 100%;
+    padding: 10px;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
 }
 
 .header{
@@ -15,11 +22,59 @@
     box-shadow: 0 0 2px black;
     margin-bottom: 20px;
     height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .body{
     background-color: aliceblue;
     border-radius: 5px;
     box-shadow: 0 0 2px black;
-    height: 85vh;
+    height: 82vh;
+    width: 100%;
+}
+
+.menu{
+    margin-top: 100px;
+    padding: 0 10px;
+}
+
+.menu-item{
+    margin-top: 30px;
+}
+
+.menu-item a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0 10px;
+}
+
+.menu-item i{
+    color: aliceblue;
+    font-size: 17px;
+    margin: 0 10px;
+}
+
+.active-menu-item{
+    color: rgb(176, 236, 243);
+    background-color: rgb(16, 160, 16);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.head-action-icon{
+    font-size: 30px !important;
+    color: rgba(0, 0, 0, 0.468);
+    cursor: pointer;
+    padding-left: 10px;
+  }
+
+@media screen and (max-width: 768px){
+
+    .menu{
+        padding: 0 5px;
+    }
+    
 }
