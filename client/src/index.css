@@ -21,6 +21,15 @@ label{
   margin: 0 10px !important;
 }
 
+.ant-picker-input input{
+  border: none !important;
+}
+
+.ant-picker{
+  border-radius: 4px !important;
+  height: 40px !important;
+  border: 2px solid gray !important;
+}
 /* Common styling */
 .spinner-parent{
   display: flex;
@@ -43,9 +52,16 @@ label{
   color: aquamarine;
 }
 
-.card-title{
-  font-size: 1.5rem;
+.page-title{
+  font-size: 25px;
+  color: green;
   font-weight: bold;
+}
+
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(0, 128, 0, 0.508);
 }
 
 .normal-text{
@@ -63,6 +79,7 @@ label{
   width: 100% !important;
   color: white !important;
   font-size: 16px !important;
+  width: max-content !important;
 }
 
 .primary-button:hover{
