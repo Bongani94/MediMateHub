@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const doctorSchema = new mongoose.Schema(
     {
-        useId : {
+        userId : {
             type: String,
             required : true
         },
