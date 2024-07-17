@@ -109,4 +109,49 @@ router.post("/apply-doctor-account", authMiddleware ,async (req, res) => {
   }
 });
 
+router.post("/mark-all-notifications-as-seen", authMiddleware ,async (req, res) => {
+  try {
+   const user = await User.findOne({ _id: req.body.userId});
+   const unseenNotifications = user.unseenNotifications;
+   const seenNotifications = user.seenNotifications
+   seenNotifications.push(...unseenNotifications);
+   user.unseenNotifications = []
+   user.seenNotifications = seenNotifications;
+   const updatedUser = await user.save()
+   updatedUser.password = undefined;
+   res.status(200).send({
+    success: true,
+    message : "All notifications marked as seen",
+    data: updatedUser,
+   })
+    
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .send({ message: "Error applying doctor acccount", success: false, error });
+  }
+});
+
+router.post("/delete-all-notifications", authMiddleware ,async (req, res) => {
+  try {
+   const user = await User.findOne({ _id: req.body.userId});
+   user.seenNotifications = [];
+   user.unseenNotifications = [];
+   const updatedUser = await user.save()
+   updatedUser.password = undefined;
+   res.status(200).send({
+    success: true,
+    message : "Deleted all notifications",
+    data: updatedUser,
+   })
+    
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .send({ message: "Error applying doctor acccount", success: false, error });
+  }
+});
+
 module.exports = router;

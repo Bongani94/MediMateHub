@@ -94,6 +94,7 @@ label{
 .anchor{
   color: rgb(26, 58, 217) !important;
   font-size: 14px !important;
+  cursor:  pointer !important;
   text-decoration: underline !important;
 }
 
