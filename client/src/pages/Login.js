@@ -44,7 +44,10 @@ function Login() {
             <Input placeholder="Password" type="password" />
           </Form.Item>
 
-          <Button className="primary-button my-2" htmlType="submit">
+          <Button
+            className="primary-button my-2 full-width-button"
+            htmlType="submit"
+          >
             Login
           </Button>
 

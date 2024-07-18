@@ -73,8 +73,8 @@ label{
 }
 
 .primary-button{
-  background-color: rgb(51, 71, 253);
-  border-color: rgb(51, 71, 253);
+  background-color: rgb(51, 71, 253) !important;
+  border-color: rgb(51, 71, 253) !important;
   height: 40px !important;
   width: 100% !important;
   color: white !important;
@@ -82,13 +82,8 @@ label{
   width: max-content !important;
 }
 
-.primary-button:hover{
-  background-color: rgb(96, 112, 249);
-  border-color: rgb(75, 92, 246);
-  height: 40px !important;
+.full-width-button{
   width: 100% !important;
-  color: rgb(112, 112, 112) !important;
-  font-size: 16px !important;
 }
 
 .anchor{
