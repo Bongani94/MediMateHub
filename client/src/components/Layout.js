@@ -58,7 +58,25 @@ function Layout({ children }) {
     },
   ];
 
-  const menuToBeRendered = user?.isAdmin ? adminMenu : userMenu;
+  // Doctor Menu
+  const doctorMenu = [
+    {
+      name: "Home",
+      path: "/",
+      icon: "fa-solid fa-house",
+    },
+    {
+      name: "Appointments",
+      path: "/appointments",
+      icon: "fa-solid fa-calendar-check",
+    },
+    {
+      name: "Profile",
+      path: `/doctor/profile/${user?._id}}`,
+      icon: "fa-solid fa-address-card",
+    },
+  ];
+  const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
 
   return (
     <div className="main p-2">

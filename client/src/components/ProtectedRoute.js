@@ -10,6 +10,7 @@ function ProtectedRoute(props) {
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  console.log(user)
 
   const getUser = async () => {
     try {

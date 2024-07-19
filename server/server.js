@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const userRoute = require("./routes/userRoute");
 const adminRoute = require("./routes/adminRoute");
+const doctorRoute = require("./routes/doctorsRoute")
 
 // Dotenv config
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(morgan("dev"));
 // Routes
 app.use("/api/user", userRoute);
 app.use("/api/admin", adminRoute);
+app.use("/api/doctor", doctorRoute)
 
 // port
 const port = process.env.PORT || 8080;
