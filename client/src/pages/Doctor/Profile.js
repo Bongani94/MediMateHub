@@ -3,14 +3,16 @@ import Layout from "../../components/Layout";
 import axios from "axios";
 import { hideLoading, showLoading } from "../../redux/alertsSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
 import DoctorForm from "../../components/DoctorForm";
+import moment from "moment"
 
 function Profile() {
 
     const dispatch = useDispatch();
     const [doctor, setDoctor] = useState(null)
+    const params = useParams()
   const { user } = useSelector((state) => state.user);
   const navigate = useNavigate();
 
@@ -18,8 +20,12 @@ function Profile() {
         try {
           dispatch(showLoading());
           const response = await axios.post(
-            "http://localhost:8080/api/user/apply-doctor-account",
-            { ...values, userId: user._id, },
+            "http://localhost:8080/api/doctor/update-doctor-profile",
+            { ...values, userId: user._id, timings:[
+              moment(values.timings[0]).format("HH:mm"),
+              moment(values.timings[1]).format("HH:mm"),
+
+            ] },
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -45,9 +51,9 @@ function Profile() {
           const response = await axios.post(
             "http://localhost:8080/api/doctor/get-doctor-info-by-user-id",
             {
-                userId: user._id,
+                userId: params.userId,
             },
-            { token: localStorage.getItem("token") },
+           
             {
               headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -59,6 +65,7 @@ function Profile() {
             setDoctor(response.data.data)
           }
         } catch (error) {
+          console.log(error)
           dispatch(hideLoading())
         }
       };
@@ -73,7 +80,7 @@ function Profile() {
         <h1 className='page-title'>Doctor Profile</h1>
         <hr />
 
-        <DoctorForm onFinish={onFinish} />
+        {doctor && <DoctorForm onFinish={onFinish} initivalValues={doctor} />}
     </Layout>
   )
 }

@@ -77,6 +77,12 @@
     font-weight: bold;
 }
 
+.role{
+    color: rgb(44, 179, 44);
+    font-size: 16px;
+    margin-top: -16px;
+}
+
 @media screen and (max-width: 768px){
 
     .menu{

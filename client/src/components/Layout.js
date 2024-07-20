@@ -77,6 +77,7 @@ function Layout({ children }) {
     },
   ];
   const menuToBeRendered = user?.isAdmin ? adminMenu : user?.isDoctor ? doctorMenu : userMenu;
+  const role = user?.isAdmin ? "Admin" : user?.isDoctor ? "Doctor" : "User";
 
   return (
     <div className="main p-2">
@@ -84,6 +85,7 @@ function Layout({ children }) {
         <div className="sidebar">
           <div className="sidebar-header">
             <h2 className="logo">MMH</h2>
+            <h2 className="role">{role}</h2>
           </div>
 
           <div className="menu">

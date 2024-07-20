@@ -33,7 +33,7 @@ function App() {
         <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
         <Route path="/admin/userslist" element={<ProtectedRoute><UsersList /></ProtectedRoute>} />
         <Route path="/admin/doctorslist" element={<ProtectedRoute><DoctorsList /></ProtectedRoute>} />
-        <Route path="/doctor/profile/:doctorId" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/doctor/profile/:userId" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
       </Routes>
     </BrowserRouter>
