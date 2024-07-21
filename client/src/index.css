@@ -85,6 +85,15 @@ label{
 .full-width-button{
   width: 100% !important;
 }
+.cursor-pointer{
+  cursor: pointer;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.54) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
 .anchor{
   color: rgb(26, 58, 217) !important;
