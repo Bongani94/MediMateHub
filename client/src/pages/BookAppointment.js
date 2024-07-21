@@ -11,6 +11,7 @@ import { Button, Col, DatePicker, Row, TimePicker } from "antd";
 
 function BookAppointment() {
   const [isAvailable, setIsAvailable] = useState(false);
+  const navigate = useNavigate()
   const [date, setDate] = useState();
   const [time, setTime] = useState();
   const { user } = useSelector((state) => state.user);
@@ -97,6 +98,7 @@ function BookAppointment() {
       dispatch(hideLoading());
       if (response.data.success) {
         toast.success(response.data.message);
+        navigate("/appointments")
       }
     } catch (error) {
       toast.error("Error booking appointment");
@@ -116,13 +118,29 @@ function BookAppointment() {
             {doctor.firstName} {doctor.lastName}
           </h1>
           <hr />
-          <Row>
+          <Row gutter={20} className="mt-5" align="middle">
             <Col span={12} sm={24} xs={24} lg={8}>
               <h1 className="normal-text">
                 <b>Timings :</b> {doctor.timings[0]} - {doctor.timings[1]}
               </h1>
+              <p>
+                <b>Phone Number : </b>
+                {doctor.phoneNumber}
+              </p>
+              <p>
+                <b>Address : </b>
+                {doctor.address}
+              </p>
+              <p>
+                <b>Fee Per Consultation : </b>
+                {doctor.feePerConsultation}
+              </p>
+              <p>
+                <b>Website : </b>
+                {doctor.website}
+              </p>
 
-              <div className="d-flex flex-column pt-2">
+              <div className="d-flex flex-column pt-2 mt-2">
                 <DatePicker
                   format="DD-MM-YYYY"
                   onChange={(value) => {
@@ -138,12 +156,14 @@ function BookAppointment() {
                     setTime(moment(value).format("HH:mm"));
                   }}
                 />
-                <Button
-                  className="primary-button mt-3 full-width-button"
-                  onClick={checkAvailability}
-                >
-                  Check Availability
-                </Button>
+                {!isAvailable && (
+                  <Button
+                    className="primary-button mt-3 full-width-button"
+                    onClick={checkAvailability}
+                  >
+                    Check Availability
+                  </Button>
+                )}
 
                 {isAvailable && (
                   <Button
@@ -155,6 +175,7 @@ function BookAppointment() {
                 )}
               </div>
             </Col>
+            <Col span={12} sm={24} xs={24} lg={8}></Col>
           </Row>
         </div>
       )}

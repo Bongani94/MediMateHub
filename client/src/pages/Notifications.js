@@ -64,7 +64,7 @@ function Notifications() {
 
   return (
     <Layout>
-      <h1 className="page-title">Notifications</h1>
+      <h1 className="page-title">Notifications</h1><hr />
 
       <Tabs>
         <Tabs.TabPane tab="Unseen" key={0}>
@@ -73,7 +73,7 @@ function Notifications() {
           </div>
 
           {user?.unseenNotifications.map((notification) => (
-            <div className="card p-2" onClick={() => navigate(notification.onClickPath)}>
+            <div className="card p-2 mt-2" onClick={() => navigate(notification.onClickPath)}>
               <div className="card-text">{notification.message}</div>
             </div>
           ))}
@@ -85,7 +85,7 @@ function Notifications() {
           </div>
 
           {user?.seenNotifications.map((notification) => (
-            <div className="card p-2" onClick={() => navigate(notification.onClickPath)}>
+            <div className="card p-2 mt-2" onClick={() => navigate(notification.onClickPath)}>
               <div className="card-text">{notification.message}</div>
             </div>
           ))}

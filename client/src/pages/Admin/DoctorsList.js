@@ -5,6 +5,7 @@ import axios from "axios";
 import {toast} from "react-hot-toast"
 import { useDispatch } from "react-redux";
 import { Table } from "antd";
+import moment from "moment";
 
 function DoctorsList() {
   const [doctors, setDoctors] = useState([]);
@@ -74,6 +75,7 @@ function DoctorsList() {
     {
       title: "Created At",
       dataIndex: "createdAt",
+      render: (record, text) => moment(record.createdAt).format("DD-MM-YYYY")
     },
     {
       title: "status",
@@ -107,7 +109,7 @@ function DoctorsList() {
 
   return (
     <Layout>
-      <h1 className="page-header">Doctors List</h1>
+      <h1 className="page-header">Doctors List</h1><hr />
       <Table columns={columns} dataSource={doctors} />
     </Layout>
   );

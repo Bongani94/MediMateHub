@@ -150,7 +150,7 @@ router.post("/delete-all-notifications", authMiddleware, async (req, res) => {
     updatedUser.password = undefined;
     res.status(200).send({
       success: true,
-      message: "Deleted all notifications",
+      message: "All notifications clear",
       data: updatedUser,
     });
   } catch (error) {
@@ -234,6 +234,22 @@ router.get("/check-booking-availability", authMiddleware, async (req, res) => {
     res
       .status(500)
       .send({ message: "Error booking Appointment", success: false, error });
+  }
+});
+
+router.get("/get-appointments-by-user-id", authMiddleware, async (req, res) => {
+  try {
+    const appointments = await Appointment.find({ userId : req.body.userId });
+    res.status(200).send({
+      message: "Appointments fetched successfully",
+      success: true,
+      data: appointments,
+    });
+  } catch (error) {
+    console.log(error);
+    res
+      .status(500)
+      .send({ message: "Error fetching appointments", success: false, error });
   }
 });
 
