@@ -36,7 +36,7 @@ router.get("/get-all-users", authMiddleware, async (req, res) => {
   }
 });
 
-router.get("/change-doctor-status", authMiddleware, async (req, res) => {
+router.post("/change-doctor-status", authMiddleware, async (req, res) => {
   try {
     const { doctorId, status } = req.body;
     const doctor = await Doctor.findByIdAndUpdate(doctorId, {

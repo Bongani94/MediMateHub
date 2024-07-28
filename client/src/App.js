@@ -23,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       {loading && (<div className="spinner-parent">
-        <div class="spinner-border" role="status">
+        <div className="spinner-border" role="status">
         </div>
       </div>)}
       <Toaster position="top-center" reverseOrder={false} />
@@ -40,9 +40,6 @@ function App() {
         <Route path="/book-appointment/:doctorId" element={<ProtectedRoute><BookAppointment /></ProtectedRoute>} />
         <Route path="/appointments" element={<ProtectedRoute><Appointments /></ProtectedRoute>} />
         <Route path="/doctor/appointments" element={<ProtectedRoute><DoctorAppointments /></ProtectedRoute>} />
-
-
-
 
       </Routes>
     </BrowserRouter>

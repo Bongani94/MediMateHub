@@ -14,7 +14,7 @@ function UsersList() {
     try {
       dispatch(showLoading());
       const response = await axios.get(
-        "http://localhost:8080/api/admin/get-all-users",
+        "http://localhost:8080/api/admin/get-all-users",  
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -23,7 +23,7 @@ function UsersList() {
       );
       dispatch(hideLoading());
       if (response.data.success) {
-        setUsers(response.data.success);
+        setUsers(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());

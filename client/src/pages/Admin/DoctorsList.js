@@ -24,7 +24,7 @@ function DoctorsList() {
       );
       dispatch(hideLoading());
       if (response.data.success) {
-        setDoctors(response.data.success);
+        setDoctors(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());
@@ -86,22 +86,22 @@ function DoctorsList() {
       dataIndex: "actions",
       render: (text, record) => (
         <div className="d-flex">
-          {record.status === "pending" && (
+          {record.status === "pending" && 
             <h1
               className="anchor"
               onClick={() => changeDoctorStatus(record, "approved")}
             >
               Approve
             </h1>
-          )}
-          {record.status === "approved" && (
+          }
+          {record.status === "approved" && 
             <h1
               className="anchor"
               onClick={() => changeDoctorStatus(record, "blocked")}
             >
               Block
             </h1>
-          )}
+          }
         </div>
       ),
     },
