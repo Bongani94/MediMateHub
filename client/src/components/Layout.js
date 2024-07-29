@@ -72,7 +72,7 @@ function Layout({ children }) {
     },
     {
       name: "Profile",
-      path: `/doctor/profile/${user?._id}}`,
+      path: `/doctor/profile/${user?._id}`,
       icon: "fa-solid fa-address-card",
     },
   ];

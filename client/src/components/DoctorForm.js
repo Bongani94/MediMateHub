@@ -1,7 +1,6 @@
-import { Button, Col, Input, Row, TimePicker } from 'antd'
+import { Button, Col, Form, Input, Row, TimePicker } from 'antd'
 import moment from 'moment'
 import React from 'react'
-import { Form } from 'react-router-dom'
 
 function DoctorForm({onFinish, initivalValues}) {
   return (
