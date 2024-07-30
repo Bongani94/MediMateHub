@@ -10,7 +10,7 @@ import moment from "moment";
 
 function ApplyDoctor() {
   const dispatch = useDispatch();
-  const { user } = useSelector((state) => state.user);
+  const { user } = useSelector(state => state.user);
   const navigate = useNavigate();
 
   const onFinish = async (values) => {
@@ -18,10 +18,11 @@ function ApplyDoctor() {
       dispatch(showLoading());
       const response = await axios.post(
         "http://localhost:8080/api/user/apply-doctor-account",
-        { ...values, userId: user._id, timings:[
+        { ...values, userId: user._id, 
+          timings:[
           moment(values.timings[0]).format("HH:mm"),
-          moment(values.timings[1]).format("HH:mm"),] 
-
+          moment(values.timings[1]).format("HH:mm"),
+        ],
         },
         {
           headers: {
