@@ -24,7 +24,7 @@ function DoctorAppointments() {
       );
       dispatch(hideLoading());
       if (response.data.success) {
-        setAppointments(response.data.success);
+        setAppointments(response.data.data);
       }
     } catch (error) {
       dispatch(hideLoading());

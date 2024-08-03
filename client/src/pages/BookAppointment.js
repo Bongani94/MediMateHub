@@ -175,7 +175,7 @@ function BookAppointment() {
                 )}
               </div>
             </Col>
-            <Col span={12} sm={24} xs={24} lg={8}></Col>
+            
           </Row>
         </div>
       )}
