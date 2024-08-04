@@ -2,7 +2,7 @@ import { Button, Col, Form, Input, Row, TimePicker } from 'antd'
 import moment from 'moment'
 import React from 'react'
 
-function DoctorForm({ onFinish, initivalValues: initivalValues }) {
+function DoctorForm({ onFinish, initivalValues}) {
   return (
     <Form layout="vertical" onFinish={onFinish} initivalValues={{
       ...initivalValues,
