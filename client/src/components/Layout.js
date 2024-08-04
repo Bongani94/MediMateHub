@@ -3,6 +3,7 @@ import "../Layout.css";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Badge } from "antd";
+import Footer from "../pages/Footer";
 
 function Layout({ children }) {
   const [collapsed, setCollapsed] = useState(false);
@@ -108,11 +109,11 @@ function Layout({ children }) {
               className={`d-flex menu-item`}
               onClick={() => {
                 localStorage.clear();
-                navigate("/login");
+                navigate("/landing-page");
               }}
             >
               <i className="fa-solid fa-power-off"></i>
-              {!collapsed && <Link to="/login">Logout</Link>}
+              {!collapsed && <Link to="/landing-page">Logout</Link>}
             </div>
           </div>
         </div>
@@ -145,7 +146,9 @@ function Layout({ children }) {
           <div className="body">{children}</div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
+    
   );
 }
 

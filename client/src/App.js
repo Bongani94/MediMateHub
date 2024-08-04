@@ -16,6 +16,7 @@ import Profile from "./pages/Doctor/Profile";
 import BookAppointment from "./pages/BookAppointment";
 import Appointments from "./pages/Appointments";
 import DoctorAppointments from "./pages/Doctor/DoctorAppointments";
+import LandingPage from "./pages/LandingPage";
 
 function App() {
   const {loading} = useSelector(state => state.alerts)
@@ -29,6 +30,7 @@ function App() {
       <Toaster position="top-center" reverseOrder={false} />
       <Routes>
 
+        <Route path="/landing-page" element={<PublicRoute><LandingPage /></PublicRoute>} />
         <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
         <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
         <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />

@@ -1,0 +1,68 @@
+.landing-page {  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    padding: 20px;  
+    background-color: #f4f4f4;  
+  }  
+  
+  .header {  
+    background-color: #6baff8;  
+    color: rgb(6, 101, 27);  
+    padding: 20px;  
+  }  
+  
+  .main-content {  
+    margin: 20px 0;
+    background-color: azure;
+  }  
+  
+  .info-section {  
+    margin-bottom: 20px;  
+  }  
+  
+  .action-section {  
+    margin: 20px 0;  
+  }  
+  
+  .button-group {  
+    display: flex;  
+    justify-content: center;  
+    gap: 20px;  
+  }  
+  
+  .btn {  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
+    cursor: pointer;  
+  }  
+  
+  .login-btn {  
+    background-color: #28a745;  
+    color: white;  
+  }  
+  
+  .register-btn {  
+    background-color: #007bff;  
+    color: white;  
+  }  
+  
+  .subscribe-btn {  
+    background-color: #ffc107;  
+    color: black;  
+  }  
+  
+  .footer {  
+    margin-top: 20px;  
+    padding: 10px;  
+    background-color: #a4e5ab;  
+    color: rgb(12, 100, 31);  
+  }
+
+  @media screen and (max-width: 768px){
+
+    .menu{
+        padding: 0 5px;
+    }
+    
+}
