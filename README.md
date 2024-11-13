@@ -2,14 +2,7 @@
 
 MediMateHub is a web-based platform that serves as a meeting point between doctors and patients, facilitating seamless communication, appointment scheduling, and virtual consultations.
 
-## Table of Contents
-Introduction
-Features
-Installation
-Usage
-License
-
-##Introduction
+## Introduction
 MediMateHub is designed to revolutionize the healthcare industry by bridging the gap between doctors and patients. It provides a secure and user-friendly platform where patients can easily find and book appointments with healthcare professionals. At the same time, doctors can manage their schedules and communicate with their patients effectively.
 
 ## Features
