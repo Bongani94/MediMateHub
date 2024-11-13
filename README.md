@@ -7,7 +7,6 @@ Introduction
 Features
 Installation
 Usage
-Contributing
 License
 
 ##Introduction
@@ -24,7 +23,7 @@ MediMateHub is designed to revolutionize the healthcare industry by bridging the
 # Installation
 ### To set up MediMateHub on your local machine, follow these steps:
 
-* Clone the repository: git clone https://github.com/your-username/MediMateHub.git
+* Clone the repository: git clone https://github.com/Bongani94/MediMateHub.git
 * Install the necessary dependencies: npm install
 * Set up the database connection and environment variables.
 * Start the development server: npm start
